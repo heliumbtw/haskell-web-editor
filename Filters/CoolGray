@@ -1,0 +1,8 @@
+import Graphics.Image.Processing
+import Graphics.Image
+import Graphics.Image.IO
+main :: IO ()
+main = do
+  frog <- readImageRGB VU  "Cat03.jpg"
+  let [frog_red, frog_green, frog_blue] = toImagesX  frog
+  writeImage "frog_green.jpg" $ toImageY frog_green
