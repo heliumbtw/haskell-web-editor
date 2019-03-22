@@ -1,0 +1,1 @@
+document.getElementById("hident4").innerHTML="This text was added by the Javascript part of the homepage widget.";$(function(){$("#js-commentForm").submit(function(event){event.preventDefault();var message=$("#js-createCommentTextarea").val();if(!message){alert("Please fill out the comment form first.");return}})})
