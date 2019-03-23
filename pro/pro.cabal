@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.0.
+-- This file has been generated from package.yaml by hpack version 0.31.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9ead94a8545395c4a114efc81c42f44034bb2bd6ad17f8b2eed3868135427f04
+-- hash: 5485e77e86aad7ec352a99b54113301153e65d85a927fabccca0042db239e36d
 
 name:           pro
 version:        0.0.0
@@ -46,11 +46,13 @@ library
     , classy-prelude-conduit >=1.4 && <1.5
     , classy-prelude-yesod >=1.4 && <1.5
     , conduit >=1.0 && <2.0
+    , connection-pool
     , containers
     , data-default
     , directory >=1.1 && <1.4
     , fast-logger >=2.2 && <2.5
     , file-embed
+    , filepath
     , foreign-store
     , hjsmin >=0.1 && <0.3
     , http-client-tls >=0.3 && <0.4
@@ -59,7 +61,7 @@ library
     , monad-logger >=0.3 && <0.4
     , persistent >=2.8 && <2.9
     , persistent-sqlite >=2.8 && <2.9
-    , persistent-template >=2.5 && <2.9
+    , persistent-template
     , safe
     , shakespeare >=2.0 && <2.1
     , template-haskell
@@ -75,7 +77,7 @@ library
     , yesod >=1.6 && <1.7
     , yesod-auth >=1.6 && <1.7
     , yesod-core >=1.6 && <1.7
-    , yesod-form >=1.6 && <1.7
+    , yesod-form
     , yesod-static >=1.6 && <1.7
   if (flag(dev)) || (flag(library-only))
     ghc-options: -Wall -fwarn-tabs -O0
@@ -101,11 +103,13 @@ executable pro
     , classy-prelude-conduit >=1.4 && <1.5
     , classy-prelude-yesod >=1.4 && <1.5
     , conduit >=1.0 && <2.0
+    , connection-pool
     , containers
     , data-default
     , directory >=1.1 && <1.4
     , fast-logger >=2.2 && <2.5
     , file-embed
+    , filepath
     , foreign-store
     , hjsmin >=0.1 && <0.3
     , http-client-tls >=0.3 && <0.4
@@ -114,7 +118,7 @@ executable pro
     , monad-logger >=0.3 && <0.4
     , persistent >=2.8 && <2.9
     , persistent-sqlite >=2.8 && <2.9
-    , persistent-template >=2.5 && <2.9
+    , persistent-template
     , pro
     , safe
     , shakespeare >=2.0 && <2.1
@@ -131,7 +135,7 @@ executable pro
     , yesod >=1.6 && <1.7
     , yesod-auth >=1.6 && <1.7
     , yesod-core >=1.6 && <1.7
-    , yesod-form >=1.6 && <1.7
+    , yesod-form
     , yesod-static >=1.6 && <1.7
   if flag(library-only)
     buildable: False
@@ -159,11 +163,13 @@ test-suite pro-test
     , classy-prelude-conduit >=1.4 && <1.5
     , classy-prelude-yesod >=1.4 && <1.5
     , conduit >=1.0 && <2.0
+    , connection-pool
     , containers
     , data-default
     , directory >=1.1 && <1.4
     , fast-logger >=2.2 && <2.5
     , file-embed
+    , filepath
     , foreign-store
     , hjsmin >=0.1 && <0.3
     , hspec >=2.0.0
@@ -174,7 +180,7 @@ test-suite pro-test
     , monad-logger >=0.3 && <0.4
     , persistent >=2.8 && <2.9
     , persistent-sqlite >=2.8 && <2.9
-    , persistent-template >=2.5 && <2.9
+    , persistent-template
     , pro
     , safe
     , shakespeare >=2.0 && <2.1
@@ -191,7 +197,7 @@ test-suite pro-test
     , yesod >=1.6 && <1.7
     , yesod-auth >=1.6 && <1.7
     , yesod-core >=1.6 && <1.7
-    , yesod-form >=1.6 && <1.7
+    , yesod-form
     , yesod-static >=1.6 && <1.7
     , yesod-test
   default-language: Haskell2010

@@ -1,75 +1,37 @@
-<style>
-    body {background: #c7b39b}
-<div .masthead>
-    <div .container>
-        <div .row>
-            <h1 .header>
-                PhotoHask : image editor
-            <h2>
-                Hask your photo, bitch
-
+$maybe msg <- mmsg
+    <div .message>
+        <div .container>
+            #{msg}
 <div .container>
-    <!-- Starting
-        ================================================== -->
-    <div .bs-docs-section>
-        <div .row>
-            <div .col-lg-12>
-                <div .bs-callout bs-callout-info well>
-                
-                   <form action="https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw">
-                        <button .btn.btn-danger type="submit">
-                            Subscribe to PewDiePie
-                                    
-                        <button .btn.btn-primary type="submit">
-                            Bullshit one
-                            
-                        <button .btn.btn-warning type="submit">
-                            Bullshit two
-                            
-                        <button .btn.btn-success type="submit">
-                            Bullshit three
-                            
-                        <button .btn.btn-secondary type="submit">
-                            Bullshit four                                   
-                            
-    <div .bs-docs-section>
-        <div .row>
-            <div .col-lg-12>
-                <div .page-header>
-                    <h1 #start> Upload your image
-
-                    <p>
-                        Upload your images in form below to start work)
-
-    <hr>
-
-    <!-- Forms
-        ================================================== -->                            
-        <div .row>
-            <div .col-lg-12>
-                <div .page-header>
-                    <h1 #forms>Form for your image
-
-                    <p>
-                        Here upload your image file and add some cool filters!!!
-
-        <div .row>
-            <div .col-lg-6>
-                <div .bs-callout bs-callout-info well>
-                    <form .form-horizontal method=post action=@{HomeR}#forms enctype=#{formEnctype}>
-                        ^{formWidget}
-
-                        <button .btn.btn-primary type="submit">
-                            Upload it!
-
-            <div .col-lg-4.col-lg-offset-1>
-                <div .bs-callout.bs-callout-info.upload-response>
-
-                    $maybe (FileForm info con) <- submission
-                        Your file type is <em>#{fileContentType info}</em>. You say it has: <em>#{con}</em>
-
-                    $nothing
-                        File upload result will be here...
+    <div .row>
+        <h2>
+            Upload new image
+        <div .form-actions>
+            <form method=post enctype=#{enctype}>
+                ^{widget}
+                <input .btn type=submit value="Upload">
+        $if not $ null images
+            <table .table>
+                <tr>
+                    <th>
+                        Image
+                    <th>
+                        Decription
+                    <th>
+                        Uploaded
+                    <th>
+                        Action
+                $forall Entity imageId image <- images
+                    <tr>
+                        <td>
+                            <a href=#{imageFilePath $ imageFilename image}>
+                                #{imageFilename image}
+                        <td>
+                            $maybe description <- imageDescription image
+                                #{description}
+                        <td>
+                            #{show $ imageDate image}
+                        <td>
+                            <img src=#{ imageFilePath $ imageFilename image} width="300" height="300">
 
 
-    <hr>

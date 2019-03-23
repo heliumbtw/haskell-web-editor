@@ -37,7 +37,11 @@ dependencies:
 - fast-logger >=2.2 && <2.5
 - wai-logger >=2.2 && <2.4
 - file-embed
+- persistent-template
 - safe
+- yesod-form
+- connection-pool
+- filepath
 - unordered-containers
 - containers
 - vector

@@ -39,9 +39,9 @@ data AppSettings = AppSettings
     , appPort                   :: Int
     -- ^ Port to listen on
     , appIpFromHeader           :: Bool
+    , appFileUploadDirectory    :: String
     -- ^ Get the IP address from the header when logging. Useful when sitting
     -- behind a reverse proxy.
-
     , appDetailedRequestLogging :: Bool
     -- ^ Use detailed request logging system
     , appShouldLogAll           :: Bool
@@ -73,6 +73,7 @@ instance FromJSON AppSettings where
 #endif
         appStaticDir              <- o .: "static-dir"
         appDatabaseConf           <- o .: "database"
+        appFileUploadDirectory    <- o .: "fileUploadDirectory"
         appRoot                   <- o .:? "approot"
         appHost                   <- fromString <$> o .: "host"
         appPort                   <- o .: "port"
