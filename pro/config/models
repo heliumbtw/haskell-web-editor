@@ -16,8 +16,7 @@ Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived
     userId UserId Maybe
     deriving Eq
     deriving Show
-Image
+Image2
     filename String
-    description Textarea Maybe
     date UTCTime
     deriving Show

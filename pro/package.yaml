@@ -39,6 +39,7 @@ dependencies:
 - file-embed
 - persistent-template
 - safe
+- hip
 - yesod-form
 - connection-pool
 - filepath

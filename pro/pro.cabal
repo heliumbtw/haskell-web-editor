@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5485e77e86aad7ec352a99b54113301153e65d85a927fabccca0042db239e36d
+-- hash: 350e47d089c64a5d2349a6e1c129d97002fcd0c3772f81a25550fb7dac348467
 
 name:           pro
 version:        0.0.0
@@ -54,6 +54,7 @@ library
     , file-embed
     , filepath
     , foreign-store
+    , hip
     , hjsmin >=0.1 && <0.3
     , http-client-tls >=0.3 && <0.4
     , http-conduit >=2.3 && <2.4
@@ -111,6 +112,7 @@ executable pro
     , file-embed
     , filepath
     , foreign-store
+    , hip
     , hjsmin >=0.1 && <0.3
     , http-client-tls >=0.3 && <0.4
     , http-conduit >=2.3 && <2.4
@@ -171,6 +173,7 @@ test-suite pro-test
     , file-embed
     , filepath
     , foreign-store
+    , hip
     , hjsmin >=0.1 && <0.3
     , hspec >=2.0.0
     , http-client-tls >=0.3 && <0.4

@@ -112,12 +112,12 @@ instance Yesod App where
         -- Define the menu items of the header.
         let menuItems =
                 [ NavbarLeft $ MenuItem
-                    { menuItemLabel = "Home"
+                    { menuItemLabel = ""
                     , menuItemRoute = HomeR
                     , menuItemAccessCallback = True
                     }
                 , NavbarLeft $ MenuItem
-                    { menuItemLabel = "Profile"
+                    { menuItemLabel = ""
                     , menuItemRoute = ProfileR
                     , menuItemAccessCallback = isJust muser
                     }
@@ -164,6 +164,17 @@ instance Yesod App where
     isAuthorized (AuthR _) _ = return Authorized
     isAuthorized CommentR _ = return Authorized
     isAuthorized HomeR _ = return Authorized
+    isAuthorized FifthR _ = return Authorized
+    isAuthorized CGrayR _ = return Authorized
+    isAuthorized CstGrayR _ = return Authorized
+    isAuthorized FlipHR _ = return Authorized
+    isAuthorized FlipVR _ = return Authorized
+    isAuthorized LtrR _ = return Authorized
+    isAuthorized NegativeR _ = return Authorized
+    isAuthorized RgbR _ = return Authorized
+    isAuthorized RotateR _ = return Authorized
+    isAuthorized SobopR _ = return Authorized
+    isAuthorized TtbR _ = return Authorized
     isAuthorized FaviconR _ = return Authorized
     isAuthorized RobotsR _ = return Authorized
     isAuthorized (StaticR _) _ = return Authorized

@@ -1,0 +1,1 @@
+$(function(){var imac=getElementById('img')})

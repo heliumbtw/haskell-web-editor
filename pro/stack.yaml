@@ -34,10 +34,16 @@ resolver: lts-12.26
 #  - wai
 packages:
 - .
+- SVGFonts-1.6.0.3
 # Dependency packages to be pulled from upstream that are not in the resolver
 # using the same syntax as the packages field.
 # (e.g., acme-missiles-0.3)
-# extra-deps: []
+extra-deps:
+
+- Chart-1.9@sha256:f41568b6b3704f66c2ec163295b430ab7d798f91de426c2d5aba747d1135cd9b
+- Chart-diagrams-1.9@sha256:cdd0c22d730e507f9644e690833096ee127302b5ff5e1571f6def419160a2642
+- hip-1.5.3.0@sha256:11a3b06a222abae8d2f1da717890b24392de1df22a2c2bb388922565a73dd9be
+
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

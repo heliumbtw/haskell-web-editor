@@ -1,37 +1,92 @@
-$maybe msg <- mmsg
-    <div .message>
-        <div .container>
-            #{msg}
+<style>
+   body {background: rgb(199,191,230)}
+<div .masthead>
+   <div .container>
+        <div .row>
+            <h1 .header>
+                PhotoHask : image editor
+            <h2>
+                Hask your photo, bitch
+                
 <div .container>
     <div .row>
         <h2>
             Upload new image
         <div .form-actions>
-            <form method=post enctype=#{enctype}>
-                ^{widget}
-                <input .btn type=submit value="Upload">
-        $if not $ null images
-            <table .table>
-                <tr>
-                    <th>
-                        Image
-                    <th>
-                        Decription
-                    <th>
-                        Uploaded
-                    <th>
-                        Action
-                $forall Entity imageId image <- images
-                    <tr>
-                        <td>
-                            <a href=#{imageFilePath $ imageFilename image}>
-                                #{imageFilename image}
-                        <td>
-                            $maybe description <- imageDescription image
-                                #{description}
-                        <td>
-                            #{show $ imageDate image}
-                        <td>
-                            <img src=#{ imageFilePath $ imageFilename image} width="300" height="300">
+         <div .sadboy>
+            <form method=post enctype=#{enctype} style="margin-left: 90px">
+                ^{widget}        
+                <input .btn type=submit value="Yes do it">                 
 
+<div .container>
+    <!-- Starting
+        ================================================== -->
+    <div .bs-docs-section>
+        <div .row>
+           <div .col-lg-12>
+             <div .bs-callout bs-callout-info well>              
+                            
+               <div .sadboy>  
+                  <form action=@{FifthR}>                
+                       <button .btn.btn-primary type="sumbit" style="margin-left: 30px">
+                           50ShadesOfGrey
+                           
+               <div .sadboy>            
+                  <form action=@{CGrayR}> 
+                     <button .btn.btn-primary type="submit">
+                         CoolGray
+                         
+               <div .sadboy>          
+                  <form action=@{CstGrayR}> 
+                     <button .btn.btn-primary type="submit">
+                         CoolestGray
+                         
+               <div .sadboy>          
+                  <form action=@{FlipHR}> 
+                     <button .btn.btn-primary type="submit">
+                          FlipH
+                          
+               <div .sadboy>           
+                  <form action=@{FlipVR}> 
+                     <button .btn.btn-primary type="submit">
+                         FlipV
+                         
+               <div .sadboy>          
+                  <form action=@{LtrR}> 
+                     <button .btn.btn-primary type="submit">
+                         LeftToRight  
+                         
+               <div .sadboy>           
+                  <form action=@{RgbR}> 
+                     <button .btn.btn-primary type="submit">
+                         RGB    
+                         
+               <div .sadboy>           
+                  <form action=@{RotateR}> 
+                     <button .btn.btn-primary type="submit">
+                         Rotate
+                         
+               <div .sadboy>          
+                  <form action=@{SobopR}> 
+                      <button .btn.btn-primary type="submit">
+                          ChangeBright 
+                          
+               <div .sadboy>            
+                  <form action=@{TtbR}>  
+                      <button .btn.btn-primary type="submit">
+                         TopToBottom
+                         
+                              
+       <div .row>                      
+         <meta http-equiv="Cache-Control" content="no-cache">
+         <img id= "img_orig" src=@{StaticR Import.img_cat_jpg} width="300" height="300" style="margin-left: 90px">
+         <img id="img" src=@{StaticR Import.img_frog2_jpg} width="300" height="300" style="margin-left:  390px">
+         
+       <p>
+         <div .sadboy>
+            <form action="https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw" style="margin-left: 825px">
+                        <button .btn.btn-danger type="submit">
+                            Subscribe to PewDiePie
+          
+          
 

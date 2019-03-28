@@ -1,0 +1,1 @@
+$(function(){var imac=getElementById('img_orig');imac.src="/home/sosat/pro/static/img/frog2.jpg"})
