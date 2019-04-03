@@ -1,1 +1,0 @@
-$(function(){var imac=getElementById('img');imac.src="http://lnfm1.sai.msu.ru/image/weather_ura.png?";new Date().getTime()})

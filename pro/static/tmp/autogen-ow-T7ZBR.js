@@ -1,1 +1,0 @@
-$(function(){location.href="http://localhost:3000/"})
