@@ -1,0 +1,9 @@
+    
+import Graphics.Image
+import Graphics.Image.Processing
+import Graphics.Image.IO
+
+main :: IO ()
+main = do
+  frog <- readImageRGBA VU  "Cat03.jpg"
+  writeImage "Cat_flipH.jpg" $ flipV frog

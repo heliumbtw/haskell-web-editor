@@ -1,0 +1,8 @@
+import Graphics.Image.Processing
+import Graphics.Image
+import Graphics.Image.IO
+
+main :: IO ()
+main = do
+  frog <- readImageRGB VS  "Cat03.jpg" 
+  writeImageExact PNG [] "frog_bin.png" $ thresholdWith (PixelRGB (>0.55) (<0.6) (<0.5)) frog
